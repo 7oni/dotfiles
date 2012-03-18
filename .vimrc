@@ -37,9 +37,13 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 set wrap!
 
 let g:Tex_MultipleCompileFormats = 'pdf'
-let g:Tex_TreatMacViewerAsUNIX = 1
 let g:Tex_ExecuteUNIXViewerInForeground = 1
-let g:Tex_ViewRule_pdf='Skim'
+
+if has('mac')
+  let g:Tex_ViewRule_pdf='Skim'
+  let g:Tex_TreatMacViewerAsUNIX = 1
+endif 
+
 
 filetype plugin indent on
 if has('autocmd')
@@ -48,7 +52,7 @@ endif
 
 if has("gui_running")
     if has("gui_gtk2")
-        set guifont=monaco\ 9 
+        set guifont=Monaco:h9
     elseif has("gui_win32")
         set guifont=Monaco:h9:cANSI
     endif
