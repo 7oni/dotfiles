@@ -39,6 +39,13 @@ set wrap!
 let g:Tex_MultipleCompileFormats = 'pdf'
 let g:Tex_ExecuteUNIXViewerInForeground = 1
 
+"Spelling german
+setlocal spell spelllang=de
+
+"Spelling englisch
+"setlocal spell spelllang=en
+"http://vimdoc.sourceforge.net/htmldoc/spell.html
+
 if has('mac')
   let g:Tex_ViewRule_pdf='Skim'
   let g:Tex_TreatMacViewerAsUNIX = 1
